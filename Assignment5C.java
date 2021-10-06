@@ -118,7 +118,7 @@ public class Assignment5C {
 					}
 				}
 
-				System.out.println("\nGoodbye");
+				System.out.println("\nGoodbye!");
 			}
 		} while (option != 4);
 	}
