@@ -2,9 +2,7 @@ import java.util.Scanner;
 
 public class Assignment5C {
 	private static int width, height, x, y, length, option = 0;
-
-	
-
+  
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 
