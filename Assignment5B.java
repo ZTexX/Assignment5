@@ -5,16 +5,10 @@ public class Assignment5B {
 		Scanner sc = new Scanner(System.in);
 		int howMany;
 		String userPlay, botPlay;
-		String[][] botPlays = {
-			{
+		String[] botPlays = {
 				"ROCK",
-			},
-			{
 				"PAPER",
-			},
-			{
 				"SCISSORS",
-			},
 		};
 
 		System.out.print("How many games do you want to play?: ");
@@ -31,7 +25,7 @@ public class Assignment5B {
 				userPlay = sc.next();
 			}
 
-			botPlay = botPlays[(int)(Math.random() * 3)][0];
+			botPlay = botPlays[(int)(Math.random() * 3)];
 			
 			System.out.println("Computer threw " + botPlay + "!");
 
