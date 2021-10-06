@@ -63,7 +63,7 @@ public class Assignment5C {
     }
 
     public boolean fitsPlatform(int x, int length) {
-      if (x + length - 1 > width) {
+      if (x + length > width) {
         return false;
       }
 
