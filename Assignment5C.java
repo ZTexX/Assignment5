@@ -149,10 +149,13 @@ public class Assignment5C {
 
         map.printMap();
       } else if (option == 4) {
+        System.out.println();
         map.printMap();
 
         System.out.println("\nGoodbye!");
       }
     } while (option != 4);
+
+    sc.close();
   }
 }

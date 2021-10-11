@@ -39,7 +39,7 @@ public class Assignment5A {
 			System.out.print(numbers[i] + ", ");
 		}
 
-		System.out.println("\nFrequencies:");
+		System.out.println("\nFrequency:");
 
 		for (int i = 0; i < highestNum; i++) {
 			System.out.println(frequencies[i][0] + " occurs " + String.format("%.2f", (double)((double)frequencies[i][1] / howLong * 100)) + "% of the time");

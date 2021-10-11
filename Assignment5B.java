@@ -32,6 +32,8 @@ public class Assignment5B {
 			rounds[i] = userPlay.equalsIgnoreCase("rock") && botPlay.equals("ROCK") ? "Tied on " : userPlay.equalsIgnoreCase("paper") && botPlay.equals("PAPER") ? "Tied on " : userPlay.equalsIgnoreCase("scissors") && botPlay.equals("SCISSORS") ? "Tied on " : userPlay.equalsIgnoreCase("rock") && botPlay.equals("SCISSORS") ? "Player won " : userPlay.equalsIgnoreCase("paper") && botPlay.equals("ROCK") ? "Player won " : userPlay.equalsIgnoreCase("scissors") && botPlay.equals("PAPER") ? "Player won " : userPlay.equalsIgnoreCase("rock") && botPlay.equals("PAPER") ? "Computer won " : userPlay.equalsIgnoreCase("paper") && botPlay.equals("SCISSORS") ? "Computer won " : userPlay.equalsIgnoreCase("scissors") && botPlay.equals("ROCK") ? "Computer won " : "";
 		}
 
+    sc.close();
+
 		System.out.println("Game Over...");
 		System.out.println("\nHere's the recap:");
 		
