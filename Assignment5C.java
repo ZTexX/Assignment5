@@ -73,7 +73,7 @@ public class Assignment5C {
 
   public static void main(String args[]) {
     Scanner sc = new Scanner(System.in);
-    int option = 0, width, height;
+    int option = 0, width, height, x, y, length = 0;
 
     System.out.println("[FYE Level Map Creator]");
     System.out.print("Enter a level map width: ");
@@ -98,61 +98,67 @@ public class Assignment5C {
         option = sc.nextInt();
       } while (option < 1 || option > 4);
 
-      if (option == 1) {
-        System.out.println("\n[Clear Level]");
+      switch (option) {
+        case 1:
+          System.out.println("\n[Clear Level]");
 
-        map.clearLevel();
-        map.printMap();
-      } else if (option == 2) {
-        int x, y, length = 0;
+          map.clearLevel();
+          map.printMap();
+          break;
 
-        System.out.println("\n[Add Platform]");
+        case 2:
+          System.out.println("\n[Add Platform]");
 
-        System.out.print("Enter X Coordinate: ");
-        x = sc.nextInt();
+          System.out.print("Enter X Coordinate: ");
+          x = sc.nextInt();
 
-        System.out.print("Enter Y Coordinate: ");
-        y = sc.nextInt();
+          System.out.print("Enter Y Coordinate: ");
+          y = sc.nextInt();
 
-        if (!map.isValid(x, y)) {
-          System.out.println("This is not a valid location!");
-        } else {
-          do {
-            System.out.print("Enter Length: ");
-            length = sc.nextInt();
-          } while (length < 1);
-
-          if (!map.fitsPlatform(x, length)) {
-            System.out.println("This platform won't fit in the level!");
+          if (!map.isValid(x, y)) {
+            System.out.println("This is not a valid location!");
           } else {
-            map.addPlatform(x, y, length);
+            do {
+              System.out.print("Enter Length: ");
+              length = sc.nextInt();
+            } while (length < 1);
+
+            if (!map.fitsPlatform(x, length)) {
+              System.out.println("This platform won't fit in the level!");
+            } else {
+              map.addPlatform(x, y, length);
+            }
           }
-        }
 
-        map.printMap();
-      } else if (option == 3) {
-        int x, y;
+          map.printMap();
+          break;
 
-        System.out.println("\n[Add Item]");
+        case 3:
+          System.out.println("\n[Add Item]");
 
-        System.out.print("Enter X Coordinate: ");
-        x = sc.nextInt();
+          System.out.print("Enter X Coordinate: ");
+          x = sc.nextInt();
 
-        System.out.print("Enter Y Coordinate: ");
-        y = sc.nextInt();
+          System.out.print("Enter Y Coordinate: ");
+          y = sc.nextInt();
 
-        if (!map.isValid(x, y)) {
-          System.out.println("This is not a valid location!");
-        } else {
-          map.addItem(x, y);
-        }
+          if (!map.isValid(x, y)) {
+            System.out.println("This is not a valid location!");
+          } else {
+            map.addItem(x, y);
+          }
 
-        map.printMap();
-      } else if (option == 4) {
-        System.out.println();
-        map.printMap();
+          map.printMap();
 
-        System.out.println("\nGoodbye!");
+          break;
+
+        case 4: 
+          System.out.println();
+          map.printMap();
+
+          System.out.println("\nGoodbye");
+
+          break;
       }
     } while (option != 4);
 
